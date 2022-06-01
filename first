@@ -1,0 +1,37 @@
+declare
+V_salary number(5) := 5;
+V_name varchar2(30) :='Sagar';
+begin
+dbms_output.put_line(V_salary);
+dbms_output.put_line(V_name);
+dbms_output.put_line('THis is my first ps/sql program');
+end;
+create table emp5(
+empid number(5) not null ,
+name1 varchar2(30) not null,
+sal number(10) not null,
+dob date not null
+);
+ insert into emp5 values( 1,'sagar',15000,'16-sep-1999');
+ insert into emp5 values(2,'siddhart',16000,'14-may-1999');
+insert into emp5 values(3,'mamohan',14000,'12-may-1999');
+insert into emp5 values(4,'harsh',13000,'13-may-1999');
+insert into emp5 values(5,'aashutosh',18000,'15-may-1999');
+create table emp6(empid number(5) not null,name1,)
+ select * from emp5; 
+ declare 
+ v_id number(5);
+ v_name varchar2(30);
+ v_sal number(10);
+ v_date date;
+ begin
+ 
+ select empid,name1,sal,dob
+ into v_id,v_name,v_sal,v_date 
+ from emp5 ;
+
+ dbms_output.put_line(v_id);
+ dbms_output.put_line(v_name);
+ dbms_output.put_line(v_sal);
+ dbms_output.put_line(v_date);
+ end;
